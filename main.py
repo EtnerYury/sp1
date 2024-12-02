@@ -163,10 +163,3 @@ async def classify(file: UploadFile = File(...)):
             status_code=500
         )
 
-
-if __name__ == "__main__":
-    # Obtén el puerto de la variable de entorno PORT, si no se encuentra, usa 8080 por defecto
-    port = int(os.getenv("PORT", 8080))
-    
-    # Ejecuta el servidor Uvicorn en el puerto asignado
-    uvicorn.run(app, host="0.0.0.0", port=port)
